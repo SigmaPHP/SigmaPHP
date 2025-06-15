@@ -23,7 +23,7 @@
         "phpunit/phpunit": "^9.5"
     },
     "scripts": {
-        "post-install-cmd": [
+        "post-create-project-cmd": [
             "php -r \"copy('.env.example', '.env');\"",
             "php -r \"copy('phpunit.xml.dist', 'phpunit.xml');\"",
             "bin/sigma-cli create:secret-key"
