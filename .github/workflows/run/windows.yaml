@@ -1,0 +1,64 @@
+name: Run on Windows
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-run:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        php-version: ["7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: mbstring, pdo, pdo_mysql
+          coverage: none
+
+      - name: Install MySQL
+        shell: powershell
+        run: |
+          choco install mysql --params '"/port:3306 /rootpassword:root /allowremoterequests:true"' -y
+          net start MySQL
+          Start-Sleep -Seconds 10
+          & "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -proot -e "CREATE DATABASE IF NOT EXISTS test;"
+
+      - name: Copy and update .env
+        shell: powershell
+        run: |
+          Copy-Item ".env.example" ".env"
+
+      - name: Install Composer dependencies
+        shell: powershell
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Start PHP built-in server
+        shell: powershell
+        run: |
+          Start-Process -NoNewWindow powershell -ArgumentList "php -S 0.0.0.0:8888 -t public"
+          Start-Sleep -Seconds 8
+
+      - name: Check app response
+        shell: powershell
+        run: |
+          $status = (Invoke-WebRequest -Uri "http://localhost:8888" -UseBasicParsing).StatusCode
+          $title = (Invoke-WebRequest -Uri "http://localhost:8888" -UseBasicParsing).Content | Select-String -Pattern '<title>.*</title>' | Select-Object -ExpandProperty Line
+
+          if ($status -ne 200) {
+            Write-Error "Invalid status code: $status"
+          }
+
+          if ($title -notlike '*SigmaPHP - Framework*') {
+            Write-Error "Title not found: $title"
+          }
+
+          Write-Output "App is running correctly on Windows with status 200 and correct title."
