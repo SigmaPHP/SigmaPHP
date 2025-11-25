@@ -62,5 +62,7 @@ jobs:
 
           if [[ "$TITLE" != *"SigmaPHP - Framework"* ]]; then
             echo "Title not found: $TITLE"
+            exit 1
+          fi
 
           echo "App is running correctly with status 200 and correct title."
