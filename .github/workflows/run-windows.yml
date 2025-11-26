@@ -24,14 +24,6 @@ jobs:
           extensions: mbstring, pdo, pdo_mysql
           coverage: none
 
-      - name: Install MySQL
-        shell: powershell
-        run: |
-          choco install mysql --params '"/port:3306 /rootpassword:root /allowremoterequests:true"' -y
-          net start MySQL
-          Start-Sleep -Seconds 10
-          & "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -proot -e "CREATE DATABASE IF NOT EXISTS test;"
-
       - name: Copy and update .env
         shell: powershell
         run: |
