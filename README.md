@@ -5,9 +5,11 @@
 <h1 align="center">
     SigmaPHP Framework
     <p align="center">
-        <img src="https://img.shields.io/badge/license-MIT-yellowgreen"/>
-        <img src="https://img.shields.io/badge/version-0.1.0-yellowgreen"/>
+        <img src="https://img.shields.io/badge/license-MIT-blue"/>
+        <img src="https://img.shields.io/badge/version-0.1.0-orange"/>
         <img src="https://img.shields.io/badge/php->=8.0-yellowgreen"/>
+        <img src="https://img.shields.io/github/actions/workflow/status/agashe/SigmaPHP/run-linux.yml?branch=master"/>
+        <img src="https://img.shields.io/packagist/dt/agashe/SigmaPHP"/>
     </p>
 </h1>
 
