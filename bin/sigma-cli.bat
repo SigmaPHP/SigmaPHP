@@ -1,5 +1,5 @@
 @echo off
 
-php ".\sigma-cli" %*
+php "%~dp0bin\sigma-cli" %*
 
 pause
