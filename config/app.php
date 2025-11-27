@@ -43,4 +43,21 @@ return [
      * Uploaded files path.
      */
     'upload_path' => env('UPLOADS_PATH', 'storage/uploads'),
+
+    /**
+     * App base path.
+     *
+     * Do not confuse this option with APP_URL. The APP_URL value defines the
+     * full application URL (e.g., https://example.com), whereas this option
+     * specifies the base path when the application is served from a
+     * sub-directory, such as:
+     *     http://localhost/apps/calculator/public
+     *
+     * In this example, the application’s base path is:
+     *     /apps/calculator/public
+     *
+     * Provide this value in the options below only when your application is
+     * running from a sub-directory. Otherwise, you can ignore this option !
+     */
+    'base_path' => env('BASE_PATH', ''),
 ];
