@@ -36,7 +36,7 @@ jobs:
       - name: Start PHP built-in server
         shell: powershell
         run: |
-          .\bin\sigma-cli.bat run
+          Start-Process -NoNewWindow powershell -ArgumentList "php -S 0.0.0.0:8888 -t public"
           Start-Sleep -Seconds 8
 
       - name: Check app response
