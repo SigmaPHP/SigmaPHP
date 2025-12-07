@@ -37,6 +37,7 @@ jobs:
         shell: powershell
         run: |
           .\bin\sigma-cli.bat run
+          Start-Sleep -Seconds 8
 
       - name: Check app response
         shell: powershell
