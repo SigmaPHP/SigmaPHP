@@ -15,10 +15,10 @@ return [
     'path_to_seeders' => env('PATH_TO_SEEDERS', '/database/seeders'),
 
     /**
-     * Default path for migrations files.
+     * Default path for models.
      */
     'path_to_models' => env('PATH_TO_MODELS', '/app/Models'),
-    
+
     /**
      * Default name for migrations history table.
      */
