@@ -20,6 +20,11 @@ return [
     'env' => env('APP_ENV', 'develop'),
 
     /**
+     * Application port.
+     */
+    'port' => env('APP_PORT', 8888),
+
+    /**
      * Controller files path.
      */
     'controllers_path' => env('CONTROLLERS_PATH', 'app/Controllers'),
