@@ -37,7 +37,7 @@ Ready to build something amazing with <b>SigmaPHP</b> ? Follow these simple step
 First, create new <b>SigmaPHP</b> project by running the following command in your terminal of choice:
 
 ``` 
-composer create-project agashe/sigmaphp my-app
+composer create-project sigmaphp/sigmaphp my-app
 ```
 Next, navigate into your new `my-app` directory and launch the PHP built-in server using the <b>SigmaPHP</b> CLI assistant tool:
 
