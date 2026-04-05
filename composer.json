@@ -17,7 +17,7 @@
         }
     },
     "require": {
-        "agashe/sigmaphp-core": "*"
+        "sigmaphp/sigmaphp-core": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
