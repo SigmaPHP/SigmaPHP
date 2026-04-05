@@ -6,10 +6,10 @@
     SigmaPHP Framework
     <p align="center">
         <img src="https://img.shields.io/badge/license-MIT-blue"/>
-        <img src="https://img.shields.io/badge/version-0.1.4-orange"/>
+        <img src="https://img.shields.io/badge/version-0.1.6-orange"/>
         <img src="https://img.shields.io/badge/php->=8.0-yellowgreen"/>
-        <img src="https://img.shields.io/github/actions/workflow/status/agashe/SigmaPHP/run-linux.yml?branch=master"/>
-        <img src="https://img.shields.io/packagist/dt/agashe/SigmaPHP"/>
+        <img src="https://img.shields.io/github/actions/workflow/status/SigmaPHP/SigmaPHP/run-linux.yml?branch=master"/>
+        <img src="https://img.shields.io/packagist/dt/SigmaPHP/SigmaPHP"/>
     </p>
 </h1>
 

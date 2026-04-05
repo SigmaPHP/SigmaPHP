@@ -8,7 +8,7 @@
             "App\\": "app/"
         },
         "files": [
-            "vendor/agashe/sigmaphp-core/src/Helpers/helper_methods.php"
+            "vendor/sigmaphp/sigmaphp-core/src/Helpers/helper_methods.php"
         ]
     },
     "autoload-dev": {
