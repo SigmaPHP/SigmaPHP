@@ -3,7 +3,7 @@ name: Run on Windows
 on:
   push:
     branches:
-      - master
+      - 0.1.x
 
 jobs:
   test-run:
