@@ -23,7 +23,7 @@
         "post-create-project-cmd": [
             "php -r \"copy('.env.example', '.env');\"",
             "php -r \"copy('phpunit.xml.dist', 'phpunit.xml');\"",
-            "bin/sigma-cli create:secret-key"
+            "bin/sigma-cli create:secret"
         ],
         "test": [
             "Composer\\Config::disableProcessTimeout",
